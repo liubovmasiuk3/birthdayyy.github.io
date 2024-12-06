@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>З днем народження, Кохана Чубака!</title>
+    <style>
+        body {
+            background-color: yellow;
+            margin: 0;
+        }
+        .center-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+        h1 {
+            font-size: 2.5em;
+            text-align: center;
+        }
+        button {
+            background-color: blue;
+            color: white;
+            font-size: 1.5em;
+            padding: 20px 40px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: darkblue;
+            transform: scale(1.1); /* Button grows when hovered */
+        }
+        #birthdayImage {
+            display: none;
+            margin-top: 20px;
+            max-width: 80%;
+            border-radius: 10px;
+            opacity: 0;
+            transition: opacity 1s ease-in-out; /* Fade-in effect */
+        }
+        #birthdayImage.show {
+            display: block;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="center-container">
+        <h1>З днем народження, Кохана Чубака!</h1>
+        <button onclick="showImage()">Тицьни тут</button>
+        <img id="birthdayImage" src="https://i.imgur.com/nhxQQnv.jpeg" alt="Фото для привітання">
+    </div>
+
+    <script>
+        function showImage() {
+            const image = document.getElementById('birthdayImage');
+            image.classList.add('show'); // Fade-in effect after showing the image
+        }
+    </script>
+
+</body>
+</html>
